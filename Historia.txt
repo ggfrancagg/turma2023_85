@@ -1,5 +1,2 @@
-<<<<<<< HEAD
-Era uma vez o Pedrinho que foi ao mercado
-=======
 Era uma vez dois cara numa moto
->>>>>>> ed524a253a163154e526f9791bbc004e73b23cec
+
