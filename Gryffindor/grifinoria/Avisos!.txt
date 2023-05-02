@@ -1,0 +1,1 @@
+*Dar um pull antes de um push*

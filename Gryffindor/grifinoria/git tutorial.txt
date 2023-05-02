@@ -1,0 +1,16 @@
+Para baixar:
+
+C:\Users\gabriel.7800\Desktop\Gryffindor\grifinoria>git pull
+
+Para enviar:
+
+C:\Users\gabriel.7800\Desktop\Gryffindor\grifinoria>git add -A
+
+C:\Users\gabriel.7800\Desktop\Gryffindor\grifinoria>git commit -m "atualizei"
+
+C:\Users\gabriel.7800\Desktop\Gryffindor\grifinoria>git push
+
+Para saber se algo foi modificado:
+
+C:\Users\gabriel.7800\Desktop\Gryffindor\grifinoria>git status
+
