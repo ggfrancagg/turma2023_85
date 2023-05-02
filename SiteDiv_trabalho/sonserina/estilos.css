@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital@1&display=swap');
+.sobre{
+	color: black;
+	font-family: 'Source Sans Pro', sans-serif;
+	background-color: #C43B2B;
+	border: 2px solid black;
+	border-radius: 16px 16px 16px 16px;
+	width: 500px;
+	height: 200px
+}
+.sobre h1 {
+	margin-left: 130px;
+	margin-top: -207px;
+}
+.sobre h2{
+	margin-left: 130px;
+	margin-top: -30px;
+}
+.sobre h4{
+	margin-left: 130px;
+	margin-top: -5px;
+}	
+.sobre img{
+	width: 24.2%;
+	margin-left: 2px;
+	margin-top: 1px;
+	border-radius: 16px 0px 0px 16px;
+}	
+#conteudo{
+	border: 2px solid black;
+	margin-left: 7px;
+}
+#conteudo h3{
+	margin-left: 7px; 
+	font-size: 1.7rem;
+
+}
