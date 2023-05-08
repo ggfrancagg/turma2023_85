@@ -26,50 +26,143 @@ $professionNames = [
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profissão</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            background: #202020;
+            color: white;
+            font-family: Helvetica;
+            display: flex;
+            flex-direction: column;
+            padding: 1em;
+            user-select: none;
+        }
+
         form {
             display: flex;
             flex-direction: column;
+            align-items: space-around;
+        }
+
+        form label {
+            font-size: 1.25rem;
+            cursor: pointer;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        input[type=radio] {
+            --size: 15px;
+            width: var(--size);
+            height: var(--size);
+            margin-right: 0.5em;
+            cursor: pointer;
+            accent-color: var(--accent);
         }
 
         input[type=submit] {
+            margin-top: 1.5rem;
+            padding: 0.3rem;
+            background: #009900;
+            border-radius: 5px;
+            border: 1px solid #007F00;
+            color: white;
+            font-size: larger;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 250ms linear;
+            width: 100%;
+        }
+
+        input[type=submit]:hover {
+            background: #00AA00;
+        }
+
+        h2 {
+            margin-bottom: 1rem;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .profession {
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profession img {
+            border-radius: 10px;
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .error {
             margin-top: 1rem;
+            color: #dc3545;
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
+    <h1>Profissões</h1>
+    <p>Escolha:</p>
     <form method="post">
-        <h1>Profissões</h1>
-        <p>Escolha:</p>
-        <div>
-            <input id="professor" type="radio" name="profession" value="professor">
-            <label for="professor">Professor</label>
-        </div>
-        <div>
-            <input id="police" type="radio" name="profession" value="police">
-            <label for="police">Policial</label>
-        </div>
-        <div>
-            <input id="fireman" type="radio" name="profession" value="fireman">
-            <label for="fireman">Bombeiro</label>
-        </div>
-        <div>
-            <input id="constructor" type="radio" name="profession" value="constructor">
-            <label for="constructor">Construtor</label>
-        </div>
-        <div>
-            <input id="programmer" type="radio" name="profession" value="programmer">
-            <label for="programmer">Programador</label>
+        <div class="row">
+            <div>
+                <input id="professor" style="--accent: #6610f2;" type="radio" name="profession" value="professor">
+                <label for="professor">Professor</label>
+            </div>
+            <div>
+                <input id="police" style="--accent: #d63384;" type="radio" name="profession" value="police">
+                <label for="police">Policial</label>
+            </div>
+            <div>
+                <input id="fireman" style="--accent: #ffc107;" type="radio" name="profession" value="fireman">
+                <label for="fireman">Bombeiro</label>
+            </div>
+            <div>
+                <input id="constructor" style="--accent: #10c9FF;" type="radio" name="profession" value="constructor">
+                <label for="constructor">Construtor</label>
+            </div>
+            <div>
+                <input id="programmer" style="--accent: #198754;" type="radio" name="profession" value="programmer">
+                <label for="programmer">Programador</label>
+            </div>
         </div>
 
-        <input type="submit" name="sent" value="Enviar">
+        <input type="submit" value="Escolher">
     </form>
 <?php
-if (isset($_POST['sent'])) { 
+if (isset($_POST['profession'])) { 
     $profession = $_POST['profession'];
     $image = $images[$profession];
 ?>
-    <h1><?= $professionNames[$profession] ?></h1>
-    <img style="width: 360px;" src="<?= $image ?>">
+    <div class="profession">
+        <h2><?= $professionNames[$profession] ?></h2>
+        <img src="<?= $image ?>">
+    </div>
+<?php } else { ?>
+    <h1 class="error">! Escolha uma profissão !</h1>
 <?php } ?>
 </body>
 </html>
