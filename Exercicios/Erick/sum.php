@@ -29,9 +29,9 @@
 $sum = 0;
 
 for ($i = 0; $i <= 100; $i++) {
-    $sum += $i;
+    $sum += ($i % 2 === 0) ? $i : 0;
 }
 ?>
-<h1>A soma dos números de 0 à 100 é: <?= $sum ?></h1>
+<h1>A soma dos números pares de 0 à 100 é: <?= $sum ?></h1>
 </body>
 </html>
