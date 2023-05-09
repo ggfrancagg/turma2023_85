@@ -10,31 +10,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabuadas de 1 à 5</title>
     <style>
+        * {
+            margin: 0;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
         body {
             display: flex;
             justify-content: space-around;
+            align-items: center;
             background: #202020;
             color: white;
-            font-family: Helvetica;
+            font-family: Verdana;
             font-size: larger;
         }
     </style>
 </head>
 <body>
-<?php
-for ($table = 1; $table <= 5; $table++) {
-?>
-<table>
-    <?php for ($j = 1; $j <= 10; $j++) { ?>
-        <tr>
-            <td><?= $table ?></td>
-            <td>&times;</td>
-            <td><?= $j ?></td>
-            <td>&equals;</td>
-            <td><?= $table * $j ?></td>
-        </tr>
-    <?php } ?>
-</table>
+<?php for ($table = 1; $table <= 5; $table++) { ?>
+    <table>
+        <?php for ($i = 1; $i <= 10; $i++) { ?>
+            <tr>
+                <td><?= $table ?></td>
+                <td>&times;</td>
+                <td><?= $i ?></td>
+                <td>&equals;</td>
+                <td><?= $table * $i ?></td>
+            </tr>
+        <?php } ?>
+    </table>
 <?php } ?>
 </body>
 </html>
