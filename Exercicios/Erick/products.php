@@ -173,9 +173,9 @@ if (isset($_GET['names'], $_GET['quantities'], $_GET['prices'])) {
             <fieldset>
                 <legend>Produto #<?= $i + 1 ?></legend>
                 <input type="text" name="names[]" placeholder="Nome" required>
-                <input type="number" name="prices[]" min="0" step="0.01" placeholder="Preço Uniário" required>
+                <input type="number" name="prices[]" min="0" step="0.01" placeholder="Preço Unitário" required>
                 <input type="number" name="quantities[]" min="1" placeholder="Quantidade" required>
-        </fieldset>
+            </fieldset>
         <?php } ?>
 
         <input type="submit" value="Comprar">
