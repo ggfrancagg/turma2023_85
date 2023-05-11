@@ -150,10 +150,10 @@ $professionNames = [
             </div>
         </div>
 
-        <input type="submit" value="Escolher">
+        <input type="submit" name="sent" value="Escolher">
     </form>
 <?php
-if (isset($_POST['profession'])) { 
+if (isset($_POST['sent'], $_POST['profession'])) { 
     $profession = $_POST['profession'];
     $image = $images[$profession];
 ?>
@@ -161,7 +161,7 @@ if (isset($_POST['profession'])) {
         <h2><?= $professionNames[$profession] ?></h2>
         <img src="<?= $image ?>">
     </div>
-<?php } else { ?>
+<?php } else if (isset($_POST['sent']) && !isset($_POST['profession'])) { ?>
     <h1 class="error">! Escolha uma profissão !</h1>
 <?php } ?>
 </body>
