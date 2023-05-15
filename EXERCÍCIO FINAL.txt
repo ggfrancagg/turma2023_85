@@ -1,0 +1,10 @@
+EXERCÍCIO FINAL
+1) Faça uma página completa sobre o tema escola de futebol:
+a) Faça a página index.html com as divs
+b) Formate a estrutura
+c) Faça a página sobre com o google maps
+d) Faça uma página futebol, contendo um parágrafo, um vídeo e uma imagem
+e) Faça a página matricula.php
+	-A pessoa informa a idade no formulário
+	-Mostre como resultado a classificação
+ fraldinha (7 a 9 anos), dente de leite (10 a 11 anos), mirim (12 a 13 anos), infantil (14 a 15 anos), infanto-juvenil (16 anos), juvenil (17) e júnior (18 a 20 anos).
