@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+*{
+	margin: 0px;
+	padding: 0px;
+}
+#topo{
+	width: 80vw;
+	height: 10vh;
+	margin-left: 10vw;
+	background:linear-gradient(#889C9B,#B2BEBF);
+	border-radius:10px;
+}
+#logo{
+	width: 20%;
+	height: 100%;
+	float:left;
+}
+#logo img{
+	width: 100%;
+	height: 100%;
+}
+#menu{
+	width: 80%;
+	height: 100%;
+	margin-left: 20%;
+}
+ul.nav{
+	list-style-type: none;
+	margin-left: 5%;
+}
+ul.nav li{
+	width: 20%;
+	padding-top: 2%;
+	color:#486966;
+	border-right:2px solid white;
+	float:left;
+	text-align: center;
+}
+ul.nav li ol{
+	display: none;
+	list-style-type: none;
+}
+ul.nav li ol li{
+	float:none;
+	padding-top: 0px;
+	border-right: 0px;
+	width: 100%;
+	background-color: rgb(255,255,255,0.7);
+}
+ul.nav li:hover ol{
+	display: block;
+}
+ul.nav li ol li a{
+	text-decoration:none;
+	text-align: center;
+	width:100%;
+	color:#486966;
+	display: block;
+}
+ul.nav li ol li:hover{
+	background-color:#44E3D3;
+}
+#principal{
+	width: 80vw;
+	height: 80vh;
+	margin-left: 10vw;
+}
+#principal #janela{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	border:0px;
+}
+#rodape{
+	width: 80vw;
+	height: 10vh;
+	margin-left: 10vw;
+	background:linear-gradient(#889C9B,#B2BEBF);
+	border-radius:10px;
+}
+#dados{
+	margin-left: 10%;
+	width: 30%;
+	color: #486966;
+	float: left;
+}
+#texto{
+	width: 60%;
+	margin-left: 40%;
+	text-align: center;
+	font-family: 'Pacifico', cursive;
+	color: white;
+}
+#produto{
+	width: 30vw;
+	height: 40vh;
+	margin-left: 2vw;
+	border-radius: 16px;
+	border:2px solid black;
+	float: left;
+}
+#produto h1{
+	background-color: #B2BEBF;
+	color: #486966;
+	font-size: 1.2rem;
+	text-align: center;
+	border-radius: 16px 16px 0px 0px;
+}
+#produto img{
+	width: 100%;
+	height: 70%;
+}
+
+@media only screen and (max-device-width: 480px) {
+
+#produto{
+	min-height: 10vh;
+}
+	#produto img{
+	width: 100%;
+	height: 30%;
+}
+
+
+}
