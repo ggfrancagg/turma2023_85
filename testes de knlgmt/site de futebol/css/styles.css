@@ -1,0 +1,151 @@
+/*=============== Geral ===========*/
+*{
+	margin: 0;
+	padding: 0;
+}
+/*=============== Body ===========*/
+body{
+	max-height: 100%;
+	width: auto;
+	padding: 20px;
+	background: linear-gradient(45deg, blue 15%, lime 45%, yellow 15%);
+	background-size:cover;
+	background-repeat: no-repeat;
+	margin-left: 20px;
+	margin-right: 20px;
+	font-family: 'Roboto Mono', monospace;
+	letter-spacing: 2px;
+}
+/*=============== Title ===========*/
+#Titulo{
+	text-align: center;
+	padding: 10px;
+	font-size: 6vw;
+	color: white;
+	-webkit-text-stroke: .8px blue;
+	text-shadow: 4px 4px 4px blue;
+	letter-spacing: .7px;
+	font-family: 'Roboto Mono', monospace;
+	margin-bottom: 5%;
+	animation-name: Apresentar;
+	animation-duration: 5s;
+}
+@keyframes Apresentar{
+	0%{
+        transform: translateY(-100%);
+        opacity: 0;
+	}
+	50%{
+        transform: translateY(0);
+        opacity: 1;
+	}
+}
+/*=============== comentar ===========*/
+section{
+	height: 100%;
+	width: auto;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+/*=============== Logo ===========*/
+#logo{
+	margin-left: 5%;
+	margin-bottom: 5%;
+	border-radius: 30px;
+	box-shadow: 5px 5px 5px 5px green;
+}
+/*=============== Descrição ===========*/
+#Descricao{
+	text-align: right;
+	color: white;
+	font-weight: none;
+	background: linear-gradient(45deg, green, blue 50%);
+	opacity: 0.9;
+	padding: 5px;
+	position: absolute;
+	left: 50%;
+	border-radius: 8px;
+	animation-name: present-2;
+	animation-duration: 5s;
+	border: solid lime 2px;
+
+
+}
+@keyframes present-2{
+	0%{
+		opacity: 0;
+		transform: translateX(200%);
+	}
+	50%{
+		opacity: 1;
+		transform: translateX(0);
+
+	}
+}
+/*=============== Matrícula ===========*/
+#Matricula a{
+	color: white;
+	text-decoration: none;
+	background: linear-gradient(45deg, green, blue 50%);
+    font-weight: bold;
+    border-radius: 8px;
+    border: solid lime 2px;
+    text-align: center;
+
+   
+
+}
+#Matricula{
+	 animation-name: present-3;
+    animation-duration: 15s;
+    padding: 3px;
+    margin-left: 50%;
+    margin-top: 10%;
+    font-size: 1.5vw;
+
+}
+#Matricula a:hover{
+	opacity: 0.7;
+	transform: scale(0.9);
+	border: 1px red solid;
+}
+@keyframes present-3{
+	0%{
+		opacity: 0;
+		transform: translateX(-100%);
+
+	}
+	50%{
+		opacity: 1;
+		transform: none;
+		
+		
+	}
+	80%{
+		
+		opacity: 0.8;
+	}
+}
+/*=============== Sidebar ===========*/
+
+ .sidebar {
+    width: 200px;
+    background-color: #f1f1f1;
+    padding: 20px;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+.sidebar a {
+    display: block;
+    color: black;
+    padding: 8px;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    background-color: #555;
+    color: white;
+}
+

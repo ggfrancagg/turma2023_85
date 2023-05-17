@@ -1,0 +1,116 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+font-family: 'Roboto Mono', monospace;
+background: linear-gradient(45deg, #887585 29%, #786575 25%);
+background-size: cover;
+background-repeat: no-repeat;
+height: 120vh;
+
+}
+#Titulo-2{
+	text-align: center;
+	margin-bottom: 8%;
+	margin-top: 5%;
+	-webkit-text-stroke: .5px blue;
+	animation-name: Present-4;
+	animation-duration: 5s;
+	font-size: 2vw;
+	color: black;
+}
+form{
+	background: gray;
+	position: absolute;
+	border-radius: 30px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	border: double 4px black;
+	box-shadow: 3px 3px 3px black;
+}
+#nome, #midn, #cpf, input{
+	border-radius: 12px;
+	border: double 4px blue;
+	padding: 10px;
+	cursor: pointer;
+	margin-left: 20px;
+	margin-right: 20px;
+    margin-top: 20px;
+    bottom: 20px;
+    
+}
+#nome:hover, #midn:hover, #cpf:hover, input:hover{
+	opacity: 0.6;
+	transition: 0.8s;
+	background-color: #fb808b;
+}
+#Cadastrar{
+	margin-left: 42%;
+	margin-right: 10px;
+	margin-bottom: 20px;
+	margin-top: 10px;
+	padding: 5px;
+	border: solid 1px blue;
+	text-align: center;
+	color: black;
+	font-size: 0.9vw;
+	letter-spacing: 2px;
+	background: #e0e6ae;
+	border-radius: 8px;
+	-webkit-text-stroke: 1px blue;
+}
+#Cadastrar:hover{
+	background: #7d677e;
+	color: white;
+	opacity: 0.6;
+	transition: 0.8s;
+	transform: scale(0.9);
+	border-color: red;
+	-webkit-text-stroke: 1px red;
+}
+p{
+	color: white;
+	text-align: center;
+}
+footer{
+	margin-top: 100vh;
+}
+
+.sidebar {
+		width: 200px;
+		background-color: #f1f1f1;
+		padding: 20px;
+		position: fixed;
+		height: 100%;
+		overflow: auto;
+		transition: all 0.3s;
+	}
+	
+	.sidebar.hidden {
+		transform: translateX(-220px);
+	}
+
+	.sidebar a {
+		display: block;
+		color: black;
+		padding: 8px;
+		text-decoration: none;
+	}
+	
+	.sidebar a:hover {
+		background-color: #555;
+		color: white;
+	}
+
+	.toggle-btn {
+		position: fixed;
+		top: 10px;
+		left: 10px;
+		padding: 10px;
+		cursor: pointer;
+		background-color: #f1f1f1;
+		border: none;
+	}
+
