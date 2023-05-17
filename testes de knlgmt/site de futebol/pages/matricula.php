@@ -13,11 +13,21 @@
    
     
     <style>
-       
+       #Verifique{
+        color: white;
+        text-align: center;
+        text-decoration: none;
+          padding: 20px;
+       }
+       #Verifique:hover{
+        color: orange;
+
+
+       }
     </style>
 </head>
 <body>
-    <button class="toggle-btn" onclick="toggleSidebar()">Toggle Sidebar</button>
+    <button class="toggle-btn" onclick="toggleSidebar()"> Sidebar</button>
     <div class="sidebar">
         <a href="../index.php">Home</a>
         <a href="matricula.php">Matricula</a>
@@ -44,7 +54,7 @@
             echo "<p>Sobrenome: $sobrenome</p>";
             echo "<p>Seu CPF: $cpf</p>";
             echo "<form method='GET' action='matricula.php'>";
-            echo "<p>Você confirma o seu cadastro?</p>";
+            echo "<p>$nome $sobrenome ,você confirma o seu cadastro?</p>";
             echo "<input type='submit' name='Sim' value='Sim!'>"; 
             echo "<input type='submit' name='Nao' value='Não!'>";
             echo "</div>";
@@ -80,6 +90,7 @@
         }
         }
     </script>
+    <a href="idade.php" id="Verifique">Verifique sua idade! &larr;</a>
 </body>
 </html>
 <?php include ('../includes/footer.inc.php');?>

@@ -130,7 +130,7 @@ section{
 
  .sidebar {
     width: 200px;
-    background-color: #f1f1f1;
+    background: linear-gradient(45deg, blue, aquamarine, purple);
     padding: 20px;
     position: fixed;
     height: 100%;

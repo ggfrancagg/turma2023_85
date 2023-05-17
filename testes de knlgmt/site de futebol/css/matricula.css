@@ -78,15 +78,15 @@ footer{
 	margin-top: 100vh;
 }
 
-.sidebar {
-		width: 200px;
-		background-color: #f1f1f1;
-		padding: 20px;
-		position: fixed;
-		height: 100%;
-		overflow: auto;
-		transition: all 0.3s;
-	}
+ .sidebar {
+    width: 200px;
+    background: linear-gradient(45deg, blue, aquamarine, purple);
+    padding: 20px;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
 	
 	.sidebar.hidden {
 		transform: translateX(-220px);
@@ -94,14 +94,16 @@ footer{
 
 	.sidebar a {
 		display: block;
-		color: black;
+		color: white;
 		padding: 8px;
 		text-decoration: none;
 	}
 	
 	.sidebar a:hover {
-		background-color: #555;
-		color: white;
+		background-color: #896D8A;
+		color: orange;
+		border-radius: 12px;
+		transition: 0.3s;
 	}
 
 	.toggle-btn {
@@ -110,7 +112,15 @@ footer{
 		left: 10px;
 		padding: 10px;
 		cursor: pointer;
-		background-color: #f1f1f1;
+		background-color: white;
 		border: none;
+		border-radius: 12px;
+	}
+	.toggle-btn:hover{
+		opacity: 0.8;
+		transition: 0.3s;
+		background: #896D8A;
+		color: white;
+
 	}
 
