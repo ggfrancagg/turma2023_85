@@ -4,7 +4,6 @@
 
 $request = substr($_SERVER['REQUEST_URI'], 8);
 $routes = [
-    '/'                  => 'pages/user/home.php',
     '/cadastrar/cliente' => 'pages/customer/create.php',
     '/cadastrar/pet'     => 'pages/pet/create.php',
     '/cadastrar/servico' => 'pages/service/create.php',
@@ -18,18 +17,15 @@ $routes = [
     '/usuario'           => 'pages/user/index.php',
     '/usuario/cadastrar' => 'pages/user/create.php',
     '/usuario/alterar'   => 'pages/user/edit.php',
+    '/login'             => 'pages/user/login.php',
     '/logout'            => 'pages/user/logout.php',
+    '/'                  => 'pages/user/home.php',
 ];
-
-if (isset($_COOKIE['user'])) {
-    require 'pages/user/login.php';
-    exit;
-}
 
 if (isset($routes[$request])) {
     require "$routes[$request]";
 } else {
-    echo '404';
+    require 'pages/404.html';
 }
 
 ?>
