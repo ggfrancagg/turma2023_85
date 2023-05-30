@@ -18,9 +18,9 @@ if (isset($_POST['name'], $_POST['password'])) {
     }
 }
 
-include_once __DIR__ . '../../header.inc.php';
+include_once __DIR__ . '../../head.inc.php';
 ?>
-<div class="container">
+<div class="container mt-3">
     <form action="/petshop/login" method="post">
         <div class="form-floating mb-2">
             <input type="text" class="form-control" name="name" id="name" placeholder="Nome" required autofocus>
