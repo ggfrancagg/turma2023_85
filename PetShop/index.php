@@ -25,7 +25,7 @@ $routes = [
 if (isset($routes[$request])) {
     require "$routes[$request]";
 } else {
-    require 'pages/404.html';
+    require 'pages/404.php';
 }
 
 ?>

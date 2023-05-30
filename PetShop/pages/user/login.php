@@ -18,11 +18,8 @@ if (isset($_POST['name'], $_POST['password'])) {
     }
 }
 
-include_once __DIR__ . '../../header.php';
+include_once __DIR__ . '../../header.inc.php';
 ?>
-<header class="bg-primary p-1 mb-3">
-    <h1 class="text-center">Login</h1>
-</header>
 <div class="container">
     <form action="/petshop/login" method="post">
         <div class="form-floating mb-2">

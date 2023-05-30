@@ -16,4 +16,3 @@
     <link rel="icon" href="/petshop/img/favicon.ico">
     <title>Sistema PetShop</title>
 </head>
-<body>

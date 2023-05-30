@@ -6,14 +6,9 @@ namespace Persistence;
 
 require_once 'Database.php';
 require_once __DIR__ . '../../models/User.php';
+require_once __DIR__ . '/Persistent.php';
 
-class User {
-    private static $database = null;
-
-    public static function connect() {
-        self::$database = new Database('root', '', 'petshop');
-    }
-
+class User extends Persistent {
     public static function create($user) {
         $sql = "INSERT INTO `user` VALUES (?, ?, ?, ?)";
         self::$database->exec($sql, [
