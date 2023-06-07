@@ -4,27 +4,36 @@
 
 $request = substr($_SERVER['REQUEST_URI'], 8);
 $routes = [
-    '/cadastrar/cliente' => 'pages/customer/create.php',
-    '/cadastrar/pet'     => 'pages/pet/create.php',
-    '/cadastrar/servico' => 'pages/service/create.php',
-    '/listar/cliente'    => 'pages/customer/index.php',
-    '/listar/pet'        => 'pages/pet/index.php',
-    '/listar/servico'    => 'pages/service/index.php',
-    '/buscar'            => 'pages/search/search.php',
-    '/buscar/resultado'  => 'pages/search/results.php',
-    '/alterar'           => 'pages/modify/modify.php',
-    '/alterar/resultado' => 'pages/modify/confirm.php',
-    '/usuario'           => 'pages/user/index.php',
-    '/usuario/cadastrar' => 'pages/user/create.php',
-    '/usuario/alterar'   => 'pages/user/edit.php',
-    '/login'             => 'pages/user/login.php',
-    '/logout'            => 'pages/user/logout.php',
-    '/'                  => 'pages/user/home.php',
+    '^/cliente/listar/?$'                => 'pages/customer/index.php',
+    '^/cliente/listar\?de\=(?P<de>\d+)' => 'pages/customer/index.php',
+    '^/cliente/cadastrar/?$'             => 'pages/customer/create.php',
+    '^/cliente/buscar/?$'                => 'pages/customer/search.php',
+    '^/cliente/(?P<id>\d+)/?$'           => 'pages/customer/show.php',
+    '^/cliente/alterar/(?P<id>\d+)/?$'   => 'pages/customer/modify.php',
+    '^/cliente/apagar/(?P<id>\d+)/?$'    => 'pages/customer/destroy.php',
+
+    '/login'                      => 'pages/user/login.php',
+    '/logout'                     => 'pages/user/logout.php',
+    '^/$'                           => 'pages/user/home.php',
 ];
 
-if (isset($routes[$request])) {
-    require "$routes[$request]";
-} else {
+$foundRoute = false;
+
+foreach ($routes as $route => $path) {
+    $route = str_replace('/', '\/', $route);
+
+    if (preg_match("/$route/", $request, $matches)) {
+        foreach (array_keys($matches) as $param) {
+            $_GET[$param] = $matches[$param];
+        }
+
+        require "$path";
+        $foundRoute = true;
+        break;
+    }
+}
+
+if (!$foundRoute) {
     require 'pages/404.php';
 }
 

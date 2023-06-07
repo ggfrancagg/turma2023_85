@@ -11,7 +11,7 @@ require_once __DIR__ . '/head.inc.php';
         <span>Ooops</span><br>
         Página Não Encontrada
     </div>
-    <a class="btn btn-primary mt-3" href="./">
+    <a class="btn btn-primary mt-3" href="/petshop/">
       <i class="bi bi-house me-1"></i>
       <span>Home</span>
     </a>

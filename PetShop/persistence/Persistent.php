@@ -4,10 +4,16 @@
 
 namespace Persistence;
 
+require_once __DIR__ . '/Database.php';
+
 class Persistent {
     protected static $database = null;
 
     public static function connect() {
         self::$database = new Database('root', '', 'petshop');
+    }
+
+    public static function error() {
+        return self::$database->error();
     }
 }

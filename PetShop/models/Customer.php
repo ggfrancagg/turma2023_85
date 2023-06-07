@@ -56,7 +56,7 @@ class Customer {
         return $this->phone;
     }
 
-    public function __construct($id, $name, $ssn, $birth, $street, $hood, $city, $state, $email, $phone) {
+    public function __construct($id, $name, $ssn, $birth, $email, $phone, $street, $hood, $city, $state) {
         $this->id = $id;
         $this->name = $name;
         $this->ssn = $ssn;

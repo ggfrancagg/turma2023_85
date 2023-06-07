@@ -21,7 +21,12 @@ if (isset($_POST['name'], $_POST['password'])) {
 include_once __DIR__ . '../../head.inc.php';
 ?>
 <div class="container mt-3">
-    <form action="/petshop/login" method="post">
+    <div class="d-flex flex-column align-items-center">
+        <img class="mb-1" src="/petshop/img/favicon.ico">
+        <h1>Bem vindo ao sistema PetShop</h1>
+        <p class="lead">Para continuar, insira seu usuário e senha, por favor</p>
+    </div>
+    <form class="w-100 mt-2" action="/petshop/login" method="post">
         <div class="form-floating mb-2">
             <input type="text" class="form-control" name="name" id="name" placeholder="Nome" required autofocus>
             <label for="name">Nome</label>
