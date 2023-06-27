@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Chat Automático</title>
+<style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    .chat-container {
+      width: 1500px;
+      margin: 0 auto;
+      padding: 40px;
+    }
+
+    .chat-messages {
+      border: 1px solid #ccc;
+      padding: 10px;
+      height: 850px;
+      overflow-y: scroll;
+      background-color: white;
+      color: black;
+      margin-bottom: 10px;
+    }
+
+    .input-container {
+      display: flex;
+    }
+
+    .input-container input[type="text"] {
+      flex: 1;
+      margin-right: 10px;
+    }
+
+    .input-container button {
+      color: white;
+      background-color: #333;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+    .chat-messages p {
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <div class="chat-container">
+    <div class="chat-messages" id="chat-messages"></div>
+    <div class="input-container">
+      <input type="text" id="input-message" placeholder="Digite sua mensagem">
+      <button onclick="enviarMensagem()">Enviar</button>
+    </div>
+  </div>
+
+  <script>
+    var chatMessages = document.getElementById("chat-messages");
+    var inputMessage = document.getElementById("input-message");
+
+    inputMessage.addEventListener("keydown", function(event) {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        enviarMensagem();
+      }
+    });
+
+    function mostrarMensagem(remetente, mensagem) {
+      var mensagemHTML = "<p><strong>" + remetente + ":</strong> " + mensagem + "</p>";
+      chatMessages.innerHTML += mensagemHTML;
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    function enviarResposta(mensagem) {
+      switch (mensagem) {
+        case "1":
+          return "Seu problema é que o produto não chegou no tempo marcado.\nVou verificar o status de entrega para você.";
+        case "2":
+          return "Seu problema é que o produto chegou errado.\nPeço desculpas pelo inconveniente. Vamos resolver isso para você.";
+        case "3":
+          return "Seu problema é fazer a troca de produto.\nVou ajudá-lo com o processo de troca. Por favor, forneça mais detalhes sobre o produto.";
+        case "4":
+          return "Seu problema é fazer a devolução do produto.\nEntendo. Vou orientá-lo sobre o processo de devolução.";
+        case "5":
+          return "Seu problema é que a compra não está sendo feita.\nVou verificar o que está acontecendo com sua compra e resolver o problema.";
+        default:
+          return "Opção inválida.";
+      }
+    }
+
+    function enviarMensagem() {
+      var mensagem = inputMessage.value;
+      var resposta = enviarResposta(mensagem);
+      mostrarMensagem("Você", mensagem);
+      mostrarMensagem("Atendente", resposta);
+      inputMessage.value = "";
+    }
+
+    mostrarMensagem("Atendente", "Olá! Como posso ajudar?");
+    mostrarMensagem("Atendente", "Poderia me informar qual é o seu problema?");
+    mostrarMensagem("Atendente", "1. O produto não chegou no tempo marcado (ou ainda não foi enviado).");
+    mostrarMensagem("Atendente", "2. O produto chegou errado (cor do produto, tamanho do produto, entre outros...).");
+    mostrarMensagem("Atendente", "3. Caso deseje fazer a troca de produto.");
+    mostrarMensagem("Atendente", "4. Caso não tenha gostado do produto e queira devolução.");
+    mostrarMensagem("Atendente", "5. Sua compra não está sendo feita.");
+  </script>
+</html>
+
+
+
